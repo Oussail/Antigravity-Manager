@@ -5,8 +5,8 @@ services:
       dockerfile: docker/Dockerfile
     image: lbjlaq/antigravity-manager
     container_name: antigravity-manager
-    # ports:  # host 模式不需要端口映射
-    #   - "8045:8045"
+    ports:  # host 模式不需要端口映射
+      - "4545:4545"
     volumes:
       - ~/.antigravity_tools:/root/.antigravity_tools
     environment:
